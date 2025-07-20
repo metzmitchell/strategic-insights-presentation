@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter } from 'react-router'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Router from './Router'
 
@@ -6,7 +6,7 @@ const AppRouter = import.meta.env.VITE_USE_HASH_ROUTE === 'true' ? HashRouter : 
 
 export default function App() {
     return (
-        <ThemeProvider>
+        <ThemeProvider defaultTheme="light">
             <AppRouter>
                 <Router />
             </AppRouter>

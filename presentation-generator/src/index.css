@@ -2,7 +2,7 @@
 
 @plugin "tailwindcss-animate";
 
-@custom-variant dark (&:is(.dark *));
+/* Dark variant removed - using light theme only */
 
 :root {
   --background: oklch(0.9848 0.0013 106.4233);
@@ -53,52 +53,7 @@
   --spacing: 0.24rem;
 }
 
-.dark {
-  --background: oklch(0.2161 0.0061 56.0434);
-  --foreground: oklch(0.9699 0.0013 106.4238);
-  --card: oklch(0.2161 0.0061 56.0434);
-  --card-foreground: oklch(0.9699 0.0013 106.4238);
-  --popover: oklch(0.2161 0.0061 56.0434);
-  --popover-foreground: oklch(0.9699 0.0013 106.4238);
-  --primary: oklch(0.4544 0.0582 135.5602);
-  --primary-foreground: oklch(0.9699 0.0013 106.4238);
-  --secondary: oklch(0.4471 0.1085 44.4146);
-  --secondary-foreground: oklch(0.9699 0.0013 106.4238);
-  --muted: oklch(0.2685 0.0063 34.2976);
-  --muted-foreground: oklch(0.7161 0.0091 56.2590);
-  --accent: oklch(0.4544 0.0582 135.5602);
-  --accent-foreground: oklch(0.9699 0.0013 106.4238);
-  --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(0.9842 0.0034 247.8575);
-  --border: oklch(0.2685 0.0063 34.2976);
-  --input: oklch(0.2685 0.0063 34.2976);
-  --ring: oklch(0.4544 0.0582 135.5602);
-  --chart-1: oklch(0.4544 0.0582 135.5602);
-  --chart-2: oklch(0.4471 0.1085 44.4146);
-  --chart-3: oklch(0.7161 0.0091 56.2590);
-  --chart-4: oklch(0.5534 0.0116 58.0708);
-  --chart-5: oklch(0.4444 0.0096 73.6390);
-  --sidebar: oklch(0.2161 0.0061 56.0434);
-  --sidebar-foreground: oklch(0.9699 0.0013 106.4238);
-  --sidebar-primary: oklch(0.4544 0.0582 135.5602);
-  --sidebar-primary-foreground: oklch(0.9699 0.0013 106.4238);
-  --sidebar-accent: oklch(0.4544 0.0582 135.5602);
-  --sidebar-accent-foreground: oklch(0.9699 0.0013 106.4238);
-  --sidebar-border: oklch(0.2685 0.0063 34.2976);
-  --sidebar-ring: oklch(0.4544 0.0582 135.5602);
-  --font-sans: var(--font-geist-sans);
-  --font-serif: Source Serif Pro, serif;
-  --font-mono: var(--font-geist-mono);
-  --radius: 0.45rem;
-  --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
-  --shadow: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
-  --shadow-md: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);
-  --shadow-lg: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
-  --shadow-xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 8px 10px -1px hsl(0 0% 0% / 0.10);
-  --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.25);
-}
+/* Dark theme removed - using light theme only */
 
 @theme inline {
   --color-background: var(--background);

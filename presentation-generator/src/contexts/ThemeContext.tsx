@@ -9,7 +9,7 @@ export const ThemeContext = createContext<ThemeType | null>(null)
 
 export function ThemeProvider({
     children,
-    defaultTheme = "system",
+    defaultTheme = "light",
     storageKey = "shadcn-ui-theme",
 }: {
     children: ReactNode
@@ -17,25 +17,16 @@ export function ThemeProvider({
     storageKey?: string
 }) {
     const [theme, setTheme] = useState(
-        () => localStorage.getItem(storageKey) ?? defaultTheme
+        () => "light" // Force light theme always
     )
 
     useEffect(() => {
         const root = window.document.documentElement
 
         root.classList.remove("light", "dark")
-
-        if (theme === "system") {
-            const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-                .matches
-                ? "dark"
-                : "light"
-
-            root.classList.add(systemTheme)
-            return
-        }
-
-        root.classList.add(theme)
+        
+        // Always apply light theme
+        root.classList.add("light")
     }, [theme])
 
     return (
@@ -43,8 +34,9 @@ export function ThemeProvider({
             value={{
                 theme,
                 setTheme: (theme: string) => {
-                    localStorage.setItem(storageKey, theme)
-                    setTheme(theme)
+                    // Always keep light theme - ignore theme changes
+                    localStorage.setItem(storageKey, "light")
+                    setTheme("light")
                 },
             }}>
             {children}
